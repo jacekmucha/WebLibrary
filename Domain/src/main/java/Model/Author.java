@@ -9,7 +9,7 @@ public class Author {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private BigInteger id;
+    private Long id;
 
     @Column (name = "first_name", nullable = false)
     private String firstName;
