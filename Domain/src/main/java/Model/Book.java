@@ -1,7 +1,6 @@
 package Model;
 
 import javax.persistence.*;
-import java.math.BigInteger;
 import java.time.LocalDate;
 
 @Entity
@@ -33,6 +32,7 @@ public class Book {
     @Column (name = "title", nullable = false)
     private String title;
 
-    @Column (name = "author_id")
+    @ManyToOne
+    @JoinColumn (name = "author_id")
     private Author author;
 }

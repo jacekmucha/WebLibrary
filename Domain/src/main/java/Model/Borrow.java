@@ -11,15 +11,17 @@ public class Borrow {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @Column(name = "book_id")
     private Book bookId;
 
-
-    @Column(name = "borrower_id")
-    private Borrower borrowerId;
-
-
     @Column(name = "rental_date")
     private LocalDate rentalDate;
+
+    @ManyToOne
+    @JoinColumn (name = "author_id")
+    private Author authorId;
+
+    @ManyToOne
+    @JoinColumn (name = "borrower_id")
+    private Borrower borrowerId;
 }

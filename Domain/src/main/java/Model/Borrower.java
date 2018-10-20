@@ -1,6 +1,7 @@
 package Model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "borrower")
@@ -19,5 +20,11 @@ public class Borrower {
     @Column(name = "borrower_details_id")
     private BorrowerDetails borrowerDetailsId;
 
+    @OneToMany (mappedBy = "borrower")
+    private List<Borrow> borrows;
+
+    @OneToOne
+    @JoinColumn (name = "borrower_details")
+    private BorrowerDetails borrowerDetails;
 
 }

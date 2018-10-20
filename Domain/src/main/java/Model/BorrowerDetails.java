@@ -19,7 +19,8 @@ public class BorrowerDetails {
     @Column(name = "phone")
     private String phone;
 
-
+    @OneToOne (mappedBy = "details")
+    private Borrower borrower;
 
 
 }
