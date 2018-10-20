@@ -1,11 +1,11 @@
-package Repositiry;
+package Repository;
 
 import Utils.EntityManagerSingleton;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.lang.reflect.ParameterizedType;
 
-public abstract class GenericRepository <T, K>{
+public abstract class GenericRepository <T, K> {
 
     protected final EntityManager em;
     protected final Class<T> entityClass;
@@ -17,7 +17,7 @@ public abstract class GenericRepository <T, K>{
         em = EntityManagerSingleton.getInstance().getEntityManager();
     }
 
-    public void create(T entity) {
+    public void createGeneric(T entity) {
         EntityTransaction transaction = null;
         try {
             transaction = em.getTransaction();
@@ -31,11 +31,11 @@ public abstract class GenericRepository <T, K>{
         }
     }
 
-    public T read(K id) {
+    public T readGeneric(K id) {
         return em.find(entityClass, id);
     }
 
-    public void update(T entity) {
+    public void updateGeneric(T entity) {
         EntityTransaction transaction = null;
         try {
             transaction = em.getTransaction();
@@ -50,7 +50,7 @@ public abstract class GenericRepository <T, K>{
     }
 
 
-    public void delete(T entity) {
+    public void deleteGeneric(T entity) {
         EntityTransaction transaction = null;
         try {
             transaction = em.getTransaction();
@@ -64,12 +64,12 @@ public abstract class GenericRepository <T, K>{
         }
     }
 
-    public void deleteById(K id) {
+    public void deleteGenericById(K id) {
         EntityTransaction transaction = null;
         try {
             transaction = em.getTransaction();
             transaction.begin();
-            T entityToRemove = read(id);
+            T entityToRemove = readGeneric(id);
             em.remove(entityToRemove);
             transaction.commit();
         } catch (Exception e) {
@@ -78,5 +78,4 @@ public abstract class GenericRepository <T, K>{
             }
         }
     }
-
 }

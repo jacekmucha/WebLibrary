@@ -1,8 +1,8 @@
 package Utils;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+        import javax.persistence.EntityManager;
+        import javax.persistence.EntityManagerFactory;
+        import javax.persistence.Persistence;
 
 public class EntityManagerSingleton {
 
@@ -11,9 +11,9 @@ public class EntityManagerSingleton {
 
     public static EntityManagerSingleton getInstance(){
 
-       if(instance == null){
+        if(instance == null){
             instance = new EntityManagerSingleton();
-       }
+        }
         return instance;
     }
 
