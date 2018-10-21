@@ -1,6 +1,6 @@
-package Repository;
+package repository;
 
-import Utils.EntityManagerSingleton;
+import utils.EntityManagerSingleton;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.lang.reflect.ParameterizedType;

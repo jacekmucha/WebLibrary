@@ -1,6 +1,6 @@
-package Repository;
+package repository;
 
-import Model.Borrow;
+import model.Borrow;
 
 public interface IBorrowRepository {
 

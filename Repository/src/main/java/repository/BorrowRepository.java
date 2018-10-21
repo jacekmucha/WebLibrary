@@ -1,6 +1,6 @@
-package Repository;
+package repository;
 
-import Model.Borrow;
+import model.Borrow;
 
 public class BorrowRepository extends GenericRepository<Borrow, Long> implements IBorrowRepository{
 

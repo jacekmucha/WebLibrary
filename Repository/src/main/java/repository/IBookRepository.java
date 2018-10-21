@@ -1,6 +1,8 @@
-package Repository;
+package repository;
 
-import Model.Book;
+import model.Book;
+
+import java.util.List;
 
 public interface IBookRepository {
 
@@ -12,5 +14,6 @@ public interface IBookRepository {
 
     void delete(Long id);
 
+    List<Book> findAll();
 
 }

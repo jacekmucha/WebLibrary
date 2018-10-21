@@ -25,7 +25,6 @@
         <tr>
         <th scope="row">${loop.index+1}</th></th>
         <td>${book.title}</td>
-        //...
         <td><input class="form-check-input" type="radio" name="bookId" value="${book.id}" checked </td>
         </c: forEach>
     </tr>

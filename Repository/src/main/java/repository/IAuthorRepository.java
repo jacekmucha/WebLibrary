@@ -1,6 +1,6 @@
-package Repository;
+package repository;
 
-import Model.Author;
+import model.Author;
 import java.util.List;
 
 public interface IAuthorRepository {
